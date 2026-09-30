@@ -21,9 +21,9 @@
 
 ### 👨‍🍳 Lo Chef · The Chef
 
-🇮🇹 Chef de Partie con laurea in **Arti Culinarie** (Accademia Italiana di Cucina, Firenze). Ho cucinato tra Roma, Firenze, la Sicilia, Birmingham e il fine dining di Copenhagen.
+🇮🇹 Chef con laurea in **Arti Culinarie** (Accademia Italiana di Cucina, Firenze). Ho cucinato tra Roma, Firenze, la Sicilia, Birmingham, Londra, Riva del Garda e dintorni e il fine dining di Copenhagen.
 
-🇬🇧 Chef de Partie with a degree in **Culinary Arts** (Italian Culinary Academy, Florence). I've cooked across Rome, Florence, Sicily, Birmingham and Copenhagen fine dining.
+🇬🇧 Chef with a degree in **Culinary Arts** (Italian Culinary Academy, Florence). I've cooked across Rome, Florence, Sicily, Birmingham, London, Riva del Garda and Copenhagen fine dining.
 
 - 🍝 Pasta fresca artigianale · *handmade fresh pasta*
 - 🔥 Griglia a carbone Josper · *Josper charcoal grill*
