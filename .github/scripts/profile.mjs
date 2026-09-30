@@ -333,11 +333,16 @@ function activityCard(buckets, t, updated) {
   const yTop = 106;
   const yBase = 252;
   const total = buckets.reduce((s, b) => s + b.count, 0);
-  const [max = 0, second = 0] = buckets.map((b) => b.count).sort((a, b) => b - a);
-  // Un picco isolato (es. un import massivo) schiaccerebbe tutto il resto sullo zero:
-  // in quel caso la scala segue il secondo valore e il picco esce dal grafico con la sua etichetta.
-  const clipped = second > 0 && max > 3 * second;
-  const { top, step } = niceMax(clipped ? second * 1.15 : max);
+  const counts = buckets.map((b) => b.count);
+  const max = Math.max(0, ...counts);
+  // Poche settimane molto sopra la mediana (es. un import massivo) schiaccerebbero tutto il
+  // resto sullo zero: in quel caso la scala segue le altre e il picco esce dal grafico con la sua etichetta.
+  const active = counts.filter((c) => c > 0).sort((a, b) => a - b);
+  const median = active[Math.floor(active.length / 2)] ?? 0;
+  const regular = counts.filter((c) => c <= 4 * median);
+  const reference = Math.max(0, ...regular);
+  const clipped = counts.length - regular.length <= 3 && reference > 0 && max > 2 * reference;
+  const { top, step } = niceMax(clipped ? reference * 1.15 : max);
   const xAt = (i) => (buckets.length > 1 ? x0 + (i * (x1 - x0)) / (buckets.length - 1) : (x0 + x1) / 2);
   const yAt = (v) => yBase - (v / top) * (yBase - yTop);
   const pts = buckets.map((b, i) => ({ x: xAt(i), y: yAt(b.count) }));

@@ -9,7 +9,7 @@ on:
     - cron: "23 4 * * *" # ogni giorno alle 04:23 UTC
   workflow_dispatch:
   push:
-    branches: [main, claude/funny-fermat-rmpnol] # TEMP: prova sul branch
+    branches: [main]
     paths:
       - ".github/workflows/profile.yml"
       - ".github/scripts/**"
