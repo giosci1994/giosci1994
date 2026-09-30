@@ -330,11 +330,14 @@ function activityCard(buckets, t, updated) {
   const H = 300;
   const x0 = 56;
   const x1 = 822;
-  const yTop = 92;
+  const yTop = 106;
   const yBase = 252;
   const total = buckets.reduce((s, b) => s + b.count, 0);
-  const max = Math.max(0, ...buckets.map((b) => b.count));
-  const { top, step } = niceMax(max);
+  const [max = 0, second = 0] = buckets.map((b) => b.count).sort((a, b) => b - a);
+  // Un picco isolato (es. un import massivo) schiaccerebbe tutto il resto sullo zero:
+  // in quel caso la scala segue il secondo valore e il picco esce dal grafico con la sua etichetta.
+  const clipped = second > 0 && max > 3 * second;
+  const { top, step } = niceMax(clipped ? second * 1.15 : max);
   const xAt = (i) => (buckets.length > 1 ? x0 + (i * (x1 - x0)) / (buckets.length - 1) : (x0 + x1) / 2);
   const yAt = (v) => yBase - (v / top) * (yBase - yTop);
   const pts = buckets.map((b, i) => ({ x: xAt(i), y: yAt(b.count) }));
@@ -358,14 +361,16 @@ function activityCard(buckets, t, updated) {
     months.push(`<text x="${round(xAt(i))}" y="${yBase + 22}" class="muted" font-size="11" text-anchor="middle">${label}</text>`);
   });
 
+  const clipTop = yTop - 8;
   let peak = '';
   if (max > 0) {
     const i = buckets.findIndex((b) => b.count === max);
-    const { x, y } = pts[i];
+    const x = pts[i].x;
+    const y = Math.max(pts[i].y, clipTop);
     const anchor = x > x1 - 60 ? 'end' : x < x0 + 60 ? 'start' : 'middle';
     peak = `<g class="fade" style="animation-delay:1.4s">
   <circle cx="${round(x)}" cy="${round(y)}" r="4" fill="${t.bg}" stroke="${t.accent[1]}" stroke-width="2"/>
-  <text x="${round(x)}" y="${round(y) - 12}" font-size="11" text-anchor="${anchor}"><tspan class="muted">picco · peak </tspan><tspan class="num" font-weight="600">${num(max)}</tspan></text>
+  <text x="${round(x)}" y="${round(y) - 12}" font-size="11" text-anchor="${anchor}"><tspan class="muted">${clipped ? '↑ fuori scala · off scale ' : 'picco · peak '}</tspan><tspan class="num" font-weight="600">${num(max)}</tspan></text>
 </g>`;
   }
   const last = pts.at(-1);
@@ -376,7 +381,8 @@ function activityCard(buckets, t, updated) {
   </linearGradient>
   <linearGradient id="stroke" gradientUnits="userSpaceOnUse" x1="${x0}" y1="0" x2="${x1}" y2="0">
     <stop offset="0" stop-color="${t.accent[0]}"/><stop offset="1" stop-color="${t.accent[1]}"/>
-  </linearGradient>`;
+  </linearGradient>
+  <clipPath id="plot"><rect x="0" y="${clipTop}" width="${W}" height="${yBase - clipTop + 4}"/></clipPath>`;
   const css = `
   .line { animation: draw 1.6s ease-out both; }
   @keyframes draw { from { stroke-dasharray: 1; stroke-dashoffset: 1; } to { stroke-dasharray: 1; stroke-dashoffset: 0; } }
@@ -389,8 +395,10 @@ function activityCard(buckets, t, updated) {
 <text x="${W - 28}" y="60" class="muted" font-size="12" text-anchor="end">contributi · contributions</text>
 ${grid.join('\n')}
 ${months.join('\n')}
-<path d="${area}" fill="url(#fill)" class="fade" style="animation-delay:.6s"/>
-<path d="${line}" pathLength="1" fill="none" stroke="url(#stroke)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="line"/>
+<g clip-path="url(#plot)">
+  <path d="${area}" fill="url(#fill)" class="fade" style="animation-delay:.6s"/>
+  <path d="${line}" pathLength="1" fill="none" stroke="url(#stroke)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="line"/>
+</g>
 ${peak}
 <circle cx="${round(last.x)}" cy="${round(last.y)}" r="4" fill="${t.accent[1]}" class="pulse"/>
 <circle cx="${round(last.x)}" cy="${round(last.y)}" r="4" fill="${t.accent[1]}"/>
