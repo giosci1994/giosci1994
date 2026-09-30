@@ -1,0 +1,71 @@
+name: Profilo · grafici e repository
+
+# Rigenera ogni giorno le card SVG (statistiche, linguaggi, attività) e la lista
+# dei repository pubblici nel README. Gli SVG finiscono sul branch `output`
+# (un solo commit, sovrascritto a ogni run) così la history di main resta pulita.
+
+on:
+  schedule:
+    - cron: "23 4 * * *" # ogni giorno alle 04:23 UTC
+  workflow_dispatch:
+  push:
+    branches: [main, claude/funny-fermat-rmpnol] # TEMP: prova sul branch
+    paths:
+      - ".github/workflows/profile.yml"
+      - ".github/scripts/**"
+
+permissions:
+  contents: write
+  actions: write # per riattivare il workflow (vedi ultimo step)
+
+concurrency:
+  group: profile
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Genera grafici e lista repository
+        run: node .github/scripts/profile.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_LOGIN: ${{ github.repository_owner }}
+
+      - name: Salva il README se la lista repository è cambiata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "README invariato"
+          else
+            git commit -m "chore: aggiorna la lista dei repository pubblici"
+            git push
+          fi
+
+      - name: Pubblica i grafici sul branch output
+        working-directory: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git init -q -b output
+          git add -A
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -q -m "Aggiorna i grafici del profilo"
+          git push -q -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output
+
+      # GitHub sospende i workflow schedulati dopo 60 giorni senza attività nel
+      # repository: riattivarlo a ogni run evita che i grafici smettano di aggiornarsi.
+      - name: Mantieni attivo il workflow schedulato
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/profile.yml/enable"

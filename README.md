@@ -1,50 +1,123 @@
 <div align="center">
 
-# Ciao, sono Giovanni 👋 &nbsp;·&nbsp; Hi, I'm Giovanni
+<img src="assets/header.svg" width="100%" alt="Ciao, sono Giovanni 👋 · Chef di professione, Dev per passione · Chef by trade, Dev by passion" />
 
-### 👨‍🍳 Chef di professione · 💻 Dev per passione
-#### *Chef by trade · Dev by passion*
+<br />
 
-*Italian fine dining by day · homelab & automation by night*
+<a href="https://giosci1994.github.io"><img src="https://img.shields.io/badge/Website-2EA44F?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" /></a>
+<a href="https://www.linkedin.com/in/giovannilacascia/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://www.instagram.com/giovannilacascia/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
 
-<p>
-  <a href="https://giosci1994.github.io"><img src="https://img.shields.io/badge/Website-2EA44F?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" /></a>
-  <a href="https://www.linkedin.com/in/giovannilacascia/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://www.instagram.com/giovannilacascia/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-</p>
-
-<p>
-  <a href="https://github.com/giosci1994"><img src="https://img.shields.io/github/followers/giosci1994?label=Follow&style=social" alt="Follow" /></a>
-  <img src="https://komarev.com/ghpvc/?username=giosci1994&label=Profile%20views&color=2ea44f&style=flat" alt="Profile views" />
-</p>
+<a href="https://github.com/giosci1994?tab=followers"><img src="https://img.shields.io/github/followers/giosci1994?label=Follower&style=flat-square&logo=github&color=7aa2f7" alt="Follower" /></a>
+<img src="https://komarev.com/ghpvc/?username=giosci1994&label=Visite%20%C2%B7%20Views&color=bb9af7&style=flat-square" alt="Profile views" />
 
 </div>
 
----
+## 👋 Chi sono · About me
 
-## 👨‍🍳 Lo Chef · The Chef
+<table>
+<tr>
+<td width="50%" valign="top">
 
-🇮🇹 Chef de Partie con laurea in **Arti Culinarie** (Accademia Italiana di Cucina, Firenze).
-Ho cucinato tra Roma, Firenze, la Sicilia, Birmingham e il fine dining di Copenhagen —
-pasta fresca artigianale, griglia a carbone Josper e gastronomia molecolare.
+### 👨‍🍳 Lo Chef · The Chef
 
-🇬🇧 Chef de Partie with a degree in **Culinary Arts** (Italian Culinary Academy, Florence).
-I've cooked across Rome, Florence, Sicily, Birmingham and Copenhagen fine dining —
-handmade fresh pasta, Josper charcoal grill and molecular gastronomy.
+🇮🇹 Chef de Partie con laurea in **Arti Culinarie** (Accademia Italiana di Cucina, Firenze). Ho cucinato tra Roma, Firenze, la Sicilia, Birmingham e il fine dining di Copenhagen.
 
-## 💻 Il Dev · The Dev
+🇬🇧 Chef de Partie with a degree in **Culinary Arts** (Italian Culinary Academy, Florence). I've cooked across Rome, Florence, Sicily, Birmingham and Copenhagen fine dining.
+
+- 🍝 Pasta fresca artigianale · *handmade fresh pasta*
+- 🔥 Griglia a carbone Josper · *Josper charcoal grill*
+- 🧪 Gastronomia molecolare · *molecular gastronomy*
+
+</td>
+<td width="50%" valign="top">
+
+### 💻 Il Dev · The Dev
 
 🇮🇹 IT enthusiast · Homelab & Automation. Software open source nato da problemi veri di casa.
+
 🇬🇧 IT enthusiast · Homelab & Automation. Open-source software born from real problems at home.
 
-**Progetti in evidenza · Featured projects**
+- 🏠 Homelab su Raspberry Pi con Docker · *self-hosted on a Raspberry Pi*
+- 🧩 Home Assistant · Traefik · Pi-hole · Nextcloud · WireGuard · tunnel Cloudflare
+- 🌱 Co-fondatore di [**Arborae**](https://arborae.github.io) · *co-founder of Arborae*
 
-- 🐳 [**d2ha — Docker to Home Assistant**](https://github.com/arborae/docker2homeassistant) — container Docker dentro Home Assistant, web UI moderna e autodiscovery MQTT · *Docker containers inside Home Assistant, modern web UI & MQTT autodiscovery* · [docs](https://arborae.github.io/docker2homeassistant/)
-- 🎵 [**widget-spotify**](https://github.com/giosci1994/widget-spotify) — mini-telecomando Spotify nella system tray di Windows · *Spotify remote in the Windows tray* · `Electron + Spotify Web API`
-- 🌱 [**Arborae**](https://arborae.github.io) — organizzazione open source che ho co-fondato: software pulito, modulare e documentato · *open-source org I co-founded: clean, modular, documented software*
-- 🧩 [**ha-appliance**](https://github.com/arborae/ha-appliance) — appliance modulare per Home Assistant · *modular appliance for Home Assistant* *(in sviluppo · WIP)*
-- 🔧 [**feature-overrides-registry**](https://github.com/giosci1994/feature-overrides-registry) — sblocca il supporto NVMe nativo sperimentale su Windows · *unlocks experimental native NVMe support on Windows*
-- 🏠 **Homelab** — Raspberry Pi con Docker: Home Assistant, Traefik, Pi-hole, Nextcloud, WireGuard, tunnel Cloudflare · *self-hosted on a Raspberry Pi*
+</td>
+</tr>
+</table>
+
+## ✨ Progetti in evidenza · Featured projects
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 🐳 [d2ha — Docker to Home Assistant](https://github.com/arborae/docker2homeassistant)
+
+Container Docker dentro Home Assistant, web UI moderna e autodiscovery MQTT.<br />
+<sub>*Docker containers inside Home Assistant, modern web UI & MQTT autodiscovery.*</sub>
+
+[📖 Documentazione · Docs](https://arborae.github.io/docker2homeassistant/)
+
+</td>
+<td width="50%" valign="top">
+
+#### 🎵 [widget-spotify](https://github.com/giosci1994/widget-spotify)
+
+Mini-telecomando Spotify nella system tray di Windows.<br />
+<sub>*Spotify remote in the Windows tray.*</sub>
+
+`Electron` `Spotify Web API`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 🌱 [Arborae](https://arborae.github.io)
+
+Organizzazione open source che ho co-fondato: software pulito, modulare e documentato.<br />
+<sub>*Open-source org I co-founded: clean, modular, documented software.*</sub>
+
+</td>
+<td width="50%" valign="top">
+
+#### 🧩 [ha-appliance](https://github.com/arborae/ha-appliance) <sub>`in sviluppo · WIP`</sub>
+
+Appliance modulare per Home Assistant.<br />
+<sub>*Modular appliance for Home Assistant.*</sub>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 🔧 [feature-overrides-registry](https://github.com/giosci1994/feature-overrides-registry)
+
+Sblocca il supporto NVMe nativo sperimentale su Windows.<br />
+<sub>*Unlocks experimental native NVMe support on Windows.*</sub>
+
+</td>
+<td width="50%" valign="top">
+
+#### 🏠 Homelab
+
+Raspberry Pi con Docker: Home Assistant, Traefik, Pi-hole, Nextcloud, WireGuard, tunnel Cloudflare.<br />
+<sub>*Self-hosted on a Raspberry Pi.*</sub>
+
+</td>
+</tr>
+</table>
+
+## 📦 Repository pubblici · Public repositories
+
+<sub>Aggiornati automaticamente ogni giorno · updated automatically every day</sub>
+
+<!-- REPOS:START -->
+
+_La lista viene generata dalla GitHub Action `profile.yml` · The list is generated by the `profile.yml` GitHub Action._
+
+<!-- REPOS:END -->
 
 ## 🧰 Il mio stack · My toolbox
 
@@ -75,9 +148,19 @@ handmade fresh pasta, Josper charcoal grill and molecular gastronomy.
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com/?user=giosci1994&hide_border=true&theme=tokyonight" alt="GitHub streak" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/giosci1994/giosci1994/output/stats-dark.svg" />
+  <img src="https://raw.githubusercontent.com/giosci1994/giosci1994/output/stats-light.svg" width="49%" alt="Statistiche GitHub · GitHub stats" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/giosci1994/giosci1994/output/languages-dark.svg" />
+  <img src="https://raw.githubusercontent.com/giosci1994/giosci1994/output/languages-light.svg" width="49%" alt="Linguaggi più usati · Top languages" />
+</picture>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=giosci1994&theme=tokyo-night&hide_border=true&area=true&custom_title=Attivit%C3%A0%20su%20GitHub%20%C2%B7%20Contribution%20activity" alt="Contribution activity graph" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/giosci1994/giosci1994/output/activity-dark.svg" />
+  <img src="https://raw.githubusercontent.com/giosci1994/giosci1994/output/activity-light.svg" width="100%" alt="Attività su GitHub · Contribution activity" />
+</picture>
 
 </div>
 
