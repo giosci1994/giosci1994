@@ -26,9 +26,9 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
 
@@ -51,16 +51,18 @@ jobs:
           fi
 
       - name: Pubblica i grafici sul branch output
-        working-directory: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git init -q -b output
+          mv dist "$RUNNER_TEMP/dist"
+          git checkout -q --orphan output
+          git rm -rfq .
+          cp "$RUNNER_TEMP"/dist/*.svg .
           git add -A
-          git -c user.name="github-actions[bot]" \
-              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
-              commit -q -m "Aggiorna i grafici del profilo"
-          git push -q -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output
+          git commit -q -m "Aggiorna i grafici del profilo"
+          for attempt in 1 2 3; do
+            git push -f origin output && exit 0
+            sleep $((attempt * 10))
+          done
+          exit 1
 
       # GitHub sospende i workflow schedulati dopo 60 giorni senza attività nel
       # repository: riattivarlo a ogni run evita che i grafici smettano di aggiornarsi.

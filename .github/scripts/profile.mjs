@@ -112,8 +112,9 @@ async function fetchProfile() {
     const { hasNextPage, endCursor } = user.repositories.pageInfo;
     after = hasNextPage ? endCursor : null;
   } while (after);
-  // Il repository del profilo (questo) non va nella lista.
-  return { user, repos: repos.filter((r) => r.name.toLowerCase() !== LOGIN.toLowerCase()) };
+  // Fuori dalla lista il repository del profilo (questo) e quello di servizio .github.
+  const hidden = new Set([LOGIN.toLowerCase(), '.github']);
+  return { user, repos: repos.filter((r) => !hidden.has(r.name.toLowerCase())) };
 }
 
 // L'API restituisce al massimo un anno per richiesta: un anno solare alla volta
@@ -401,9 +402,13 @@ ${peak}
 
 const mdText = (s) => s.replace(/\s+/g, ' ').trim().replace(/[\\|]/g, '\\$&').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
+// Taglia a fine parola, senza spezzare emoji o caratteri composti.
 function truncate(s, max) {
   const chars = Array.from(s);
-  return chars.length > max ? `${chars.slice(0, max - 1).join('').trimEnd()}…` : s;
+  if (chars.length <= max) return s;
+  const cut = chars.slice(0, max).join('');
+  const space = cut.lastIndexOf(' ');
+  return `${(space > max * 0.6 ? cut.slice(0, space) : cut).replace(/[\s.,;:·—–-]+$/, '')}…`;
 }
 
 function reposMarkdown(repos) {
@@ -412,15 +417,16 @@ function reposMarkdown(repos) {
   const rows = sorted.map((r) => {
     let name = `[**${r.name}**](${r.url})`;
     if (r.homepageUrl) name += ` [🔗](<${/^https?:\/\//.test(r.homepageUrl) ? r.homepageUrl : `https://${r.homepageUrl}`}>)`;
+    if (r.stargazerCount) name += ` <sub>⭐ ${r.stargazerCount}</sub>`;
     if (r.isArchived) name += ' <sub>archiviato · archived</sub>';
-    const description = r.description ? mdText(truncate(r.description, 140)) : '—';
+    const description = r.description ? mdText(truncate(r.description, 130)) : '—';
     const language = r.primaryLanguage ? mdText(r.primaryLanguage.name) : '—';
     const pushed = r.pushedAt ? `${MONTHS[Number(r.pushedAt.slice(5, 7)) - 1]} ${r.pushedAt.slice(0, 4)}` : '—';
-    return `| ${name} | ${description} | ${language} | ${r.stargazerCount} | ${pushed} |`;
+    return `| ${name} | ${description} | ${language} | ${pushed} |`;
   });
   return [
-    '| Repository | Descrizione · Description | Linguaggio · Language | ⭐ | Ultimo push · Last push |',
-    '| :-- | :-- | :-- | :-: | :-- |',
+    '| Repository | Descrizione · Description | Linguaggio · Language | Ultimo push · Last push |',
+    '| :-- | :-- | :-- | :-- |',
     ...rows,
   ].join('\n');
 }
