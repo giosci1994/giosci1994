@@ -7,6 +7,7 @@
 <a href="https://giosci1994.github.io"><img src="https://img.shields.io/badge/Website-2EA44F?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" /></a>
 <a href="https://www.linkedin.com/in/giovannilacascia/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="https://www.instagram.com/giovannilacascia/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+<a href="https://buymeacoffee.com/giosci1994u"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee" /></a>
 
 <a href="https://github.com/giosci1994?tab=followers"><img src="https://img.shields.io/github/followers/giosci1994?label=Follower&style=flat-square&logo=github&color=7aa2f7" alt="Follower" /></a>
 <img src="https://komarev.com/ghpvc/?username=giosci1994&label=Visite%20%C2%B7%20Views&color=bb9af7&style=flat-square" alt="Profile views" />
@@ -177,5 +178,7 @@ Raspberry Pi con Docker: Home Assistant, Traefik, Pi-hole, Nextcloud, WireGuard,
 <div align="center">
 
 *fatto con ❤️ tra fornelli e container · made with ❤️ between stoves and containers*
+
+☕ Se un mio progetto ti è utile, puoi [offrirmi un caffè](https://buymeacoffee.com/giosci1994u) · *if one of my projects helps you, you can [buy me a coffee](https://buymeacoffee.com/giosci1994u)*
 
 </div>
