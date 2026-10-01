@@ -118,13 +118,14 @@ Raspberry Pi con Docker: Home Assistant, Traefik, Pi-hole, Nextcloud, WireGuard,
 
 | Repository | Descrizione · Description | Linguaggio · Language | Ultimo push · Last push |
 | :-- | :-- | :-- | :-- |
-| [**widget-spotify**](https://github.com/giosci1994/widget-spotify) [🔗](<https://giosci1994.github.io/widget-spotify/>) | 🎵 Spotify remote in the Windows system tray — now playing, controls & device switch (Echo/PC/phone). Electron + Spotify Web API… | JavaScript | set 2026 |
-| [**webapp-palestra**](https://github.com/giosci1994/webapp-palestra) [🔗](<https://giosci1994.github.io/webapp-palestra/>) | 🏋️‍♂️ Complete microservice architecture platform for gym management with Web Dashboard, Telegram Bot & Automated Scraper. | JavaScript | set 2026 |
+| [**linktome**](https://github.com/giosci1994/linktome) [🔗](<https://giosci1994.github.io/linktome/>) | 🔗 All my links in one place: socials, projects & support. Day = Chef, night = Dev. Bilingual IT/EN, vanilla HTML/CSS/JS on GitHub… | HTML | ott 2026 |
+| [**widget-spotify**](https://github.com/giosci1994/widget-spotify) [🔗](<https://giosci1994.github.io/widget-spotify/>) | 🎵 Spotify remote in the Windows system tray — now playing, controls & device switch (Echo/PC/phone). Electron + Spotify Web API… | JavaScript | ott 2026 |
+| [**giosci1994.github.io**](https://github.com/giosci1994/giosci1994.github.io) [🔗](<https://giosci1994.github.io>) | 👨‍🍳💻 Personal site of Giovanni La Cascia — Chef by day, Dev by night. Split-screen, dual-theme, bilingual IT/EN. Vanilla… | HTML | ott 2026 |
+| [**feature-overrides-registry**](https://github.com/giosci1994/feature-overrides-registry) [🔗](<https://github.com/giosci1994/feature-overrides-registry/releases/latest>) <sub>⭐ 1</sub> | Enable/Disable hidden Windows Feature Management overrides to unlock experimental Native NVMe support. Includes scripts, .exe… | PowerShell | ott 2026 |
+| [**kitchen-app**](https://github.com/giosci1994/kitchen-app) [🔗](<https://giosci1994.github.io/kitchen-app/>) | Modern Kitchen & Restaurant Management Platform (PWA, Inventory, Recipes, Prep-Lists & Docker ready) | TypeScript | ott 2026 |
+| [**webapp-palestra**](https://github.com/giosci1994/webapp-palestra) [🔗](<https://giosci1994.github.io/webapp-palestra/>) | 🏋️‍♂️ Complete microservice architecture platform for gym management with Web Dashboard, Telegram Bot & Automated Scraper. | JavaScript | ott 2026 |
+| [**PC-MQTT-Notifier**](https://github.com/giosci1994/PC-MQTT-Notifier) [🔗](<https://giosci1994.github.io/PC-MQTT-Notifier/>) | 🔔 Lightweight Windows notification overlay for MQTT & Home Assistant — customizable scale, transparency, fluid background, tray… | Python | ott 2026 |
 | [**rejuvenation-ita-patch**](https://github.com/giosci1994/rejuvenation-ita-patch) [🔗](<https://giosci1994.github.io/rejuvenation-ita-patch/>) | 🇮🇹 Complete unofficial Italian translation patch for Pokémon Rejuvenation — 99.9% of the game's text | Python | set 2026 |
-| [**PC-MQTT-Notifier**](https://github.com/giosci1994/PC-MQTT-Notifier) [🔗](<https://giosci1994.github.io/PC-MQTT-Notifier/>) | 🔔 Lightweight Windows notification overlay for MQTT & Home Assistant — customizable scale, transparency, fluid background, tray… | Python | lug 2026 |
-| [**giosci1994.github.io**](https://github.com/giosci1994/giosci1994.github.io) [🔗](<https://giosci1994.github.io>) | 👨‍🍳💻 Personal site of Giovanni La Cascia — Chef by day, Dev by night. Split-screen, dual-theme, bilingual IT/EN. Vanilla… | HTML | lug 2026 |
-| [**kitchen-app**](https://github.com/giosci1994/kitchen-app) [🔗](<https://giosci1994.github.io/kitchen-app/>) | Modern Kitchen & Restaurant Management Platform (PWA, Inventory, Recipes, Prep-Lists & Docker ready) | TypeScript | lug 2026 |
-| [**feature-overrides-registry**](https://github.com/giosci1994/feature-overrides-registry) [🔗](<https://github.com/giosci1994/feature-overrides-registry/releases/latest>) <sub>⭐ 1</sub> | Enable/Disable hidden Windows Feature Management overrides to unlock experimental Native NVMe support. Includes scripts, .exe… | PowerShell | lug 2026 |
 
 <!-- REPOS:END -->
 
