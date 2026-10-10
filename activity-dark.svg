@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="300" viewBox="0 0 850 300" role="img" aria-label="Attività su GitHub · Contribution activity">
+<title>Attività su GitHub · Contribution activity</title>
+<defs>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#7aa2f7"/><stop offset="1" stop-color="#bb9af7"/>
+  </linearGradient>
+  <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#bb9af7" stop-opacity=".35"/><stop offset="1" stop-color="#7aa2f7" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="stroke" gradientUnits="userSpaceOnUse" x1="56" y1="0" x2="822" y2="0">
+    <stop offset="0" stop-color="#7aa2f7"/><stop offset="1" stop-color="#bb9af7"/>
+  </linearGradient>
+  <clipPath id="plot"><rect x="0" y="98" width="850" height="158"/></clipPath>
+</defs>
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; fill: #e6edf3; }
+  .title { font-size: 11px; font-weight: 600; letter-spacing: .08em; fill: #8b949e; }
+  .muted { fill: #8b949e; }
+  .num { font-variant-numeric: tabular-nums; }
+  .accent { fill: url(#accent); }
+  .fade { animation: fade .7s ease-out both; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  .line { animation: draw 1.6s ease-out both; }
+  @keyframes draw { from { stroke-dasharray: 1; stroke-dashoffset: 1; } to { stroke-dasharray: 1; stroke-dashoffset: 0; } }
+  .pulse { transform-origin: 822px 213.1px; animation: pulse 2s ease-out 1.6s infinite; opacity: 0; }
+  @keyframes pulse { from { transform: scale(1); opacity: .6; } to { transform: scale(3.2); opacity: 0; } }
+</style>
+<rect x=".5" y=".5" width="849" height="299" rx="12" fill="#0d1117" stroke="#30363d"/>
+
+<text x="24" y="38" font-size="17" font-weight="600">Attività su GitHub · Contribution activity</text>
+<text x="24" y="60" class="muted" font-size="12">Contributi a settimana, ultimi 12 mesi · weekly, last 12 months</text>
+<text x="822" y="40" class="num accent" font-size="24" font-weight="700" text-anchor="end">813</text>
+<text x="822" y="60" class="muted" font-size="12" text-anchor="end">contributi · contributions</text>
+<line x1="56" y1="252" x2="822" y2="252" stroke="#21262d" stroke-width="1"/>
+<text x="44" y="256" class="num muted" font-size="11" text-anchor="end">0</text>
+<line x1="56" y1="203.3" x2="822" y2="203.3" stroke="#21262d" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="44" y="207.3" class="num muted" font-size="11" text-anchor="end">20</text>
+<line x1="56" y1="154.7" x2="822" y2="154.7" stroke="#21262d" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="44" y="158.7" class="num muted" font-size="11" text-anchor="end">40</text>
+<line x1="56" y1="106" x2="822" y2="106" stroke="#21262d" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="44" y="110" class="num muted" font-size="11" text-anchor="end">60</text>
+<text x="86" y="274" class="muted" font-size="11" text-anchor="middle">nov</text>
+<text x="161.1" y="274" class="muted" font-size="11" text-anchor="middle">dic</text>
+<text x="221.2" y="274" class="muted" font-size="11" text-anchor="middle">gen ’26</text>
+<text x="296.3" y="274" class="muted" font-size="11" text-anchor="middle">feb</text>
+<text x="356.4" y="274" class="muted" font-size="11" text-anchor="middle">mar</text>
+<text x="416.5" y="274" class="muted" font-size="11" text-anchor="middle">apr</text>
+<text x="476.5" y="274" class="muted" font-size="11" text-anchor="middle">mag</text>
+<text x="551.6" y="274" class="muted" font-size="11" text-anchor="middle">giu</text>
+<text x="611.7" y="274" class="muted" font-size="11" text-anchor="middle">lug</text>
+<text x="671.8" y="274" class="muted" font-size="11" text-anchor="middle">ago</text>
+<text x="746.9" y="274" class="muted" font-size="11" text-anchor="middle">set</text>
+<text x="807" y="274" class="muted" font-size="11" text-anchor="middle">ott</text>
+<g clip-path="url(#plot)">
+  <path d="M56,252C61,252 66,252 71,252C76,252 81,252 86,252C91,252 96.1,252 101.1,252C106.1,252 111.1,205 116.1,174.1C121.1,143.2 126.1,123 131.1,59.8C136.1,-3.5 141.1,-497.5 146.1,-497.5C151.1,-497.5 156.1,-161.6 161.1,-42.4C166.1,76.7 171.2,252 176.2,252C181.2,252 186.2,252 191.2,252C196.2,252 201.2,252 206.2,252C211.2,252 216.2,252 221.2,252C226.2,252 231.2,252 236.2,252C241.2,252 246.2,215.5 251.3,215.5C256.3,215.5 261.3,232.2 266.3,237.4C271.3,242.6 276.3,249.6 281.3,249.6C286.3,249.6 291.3,208.2 296.3,208.2C301.3,208.2 306.3,248 311.3,249.6C316.3,251.1 321.3,252 326.4,252C331.4,252 336.4,252 341.4,252C346.4,252 351.4,252 356.4,252C361.4,252 366.4,252 371.4,252C376.4,252 381.4,252 386.4,252C391.4,252 396.4,252 401.5,252C406.5,252 411.5,252 416.5,252C421.5,252 426.5,252 431.5,252C436.5,252 441.5,208.2 446.5,208.2C451.5,208.2 456.5,252 461.5,252C466.5,252 471.5,252 476.5,252C481.6,252 486.6,252 491.6,252C496.6,252 501.6,252 506.6,252C511.6,252 516.6,252 521.6,252C526.6,252 531.6,252 536.6,252C541.6,252 546.6,252 551.6,252C556.7,252 561.7,252 566.7,252C571.7,252 576.7,217.9 581.7,217.9C586.7,217.9 591.7,252 596.7,252C601.7,252 606.7,247.5 611.7,244.7C616.7,241.9 621.7,240.8 626.7,235C631.8,229.1 636.8,147.4 641.8,147.4C646.8,147.4 651.8,164.8 656.8,174.1C661.8,183.4 666.8,191.2 671.8,203.3C676.8,215.5 681.8,252 686.8,252C691.8,252 696.8,252 701.8,252C706.8,252 711.9,252 716.9,252C721.9,252 726.9,252 731.9,252C736.9,252 741.9,252 746.9,252C751.9,252 756.9,252 761.9,252C766.9,252 771.9,252 776.9,252C781.9,252 787,127.9 792,127.9C797,127.9 802,171.1 807,183.9C812,196.7 817,203.3 822,213.1L822,252L56,252Z" fill="url(#fill)" class="fade" style="animation-delay:.6s"/>
+  <path d="M56,252C61,252 66,252 71,252C76,252 81,252 86,252C91,252 96.1,252 101.1,252C106.1,252 111.1,205 116.1,174.1C121.1,143.2 126.1,123 131.1,59.8C136.1,-3.5 141.1,-497.5 146.1,-497.5C151.1,-497.5 156.1,-161.6 161.1,-42.4C166.1,76.7 171.2,252 176.2,252C181.2,252 186.2,252 191.2,252C196.2,252 201.2,252 206.2,252C211.2,252 216.2,252 221.2,252C226.2,252 231.2,252 236.2,252C241.2,252 246.2,215.5 251.3,215.5C256.3,215.5 261.3,232.2 266.3,237.4C271.3,242.6 276.3,249.6 281.3,249.6C286.3,249.6 291.3,208.2 296.3,208.2C301.3,208.2 306.3,248 311.3,249.6C316.3,251.1 321.3,252 326.4,252C331.4,252 336.4,252 341.4,252C346.4,252 351.4,252 356.4,252C361.4,252 366.4,252 371.4,252C376.4,252 381.4,252 386.4,252C391.4,252 396.4,252 401.5,252C406.5,252 411.5,252 416.5,252C421.5,252 426.5,252 431.5,252C436.5,252 441.5,208.2 446.5,208.2C451.5,208.2 456.5,252 461.5,252C466.5,252 471.5,252 476.5,252C481.6,252 486.6,252 491.6,252C496.6,252 501.6,252 506.6,252C511.6,252 516.6,252 521.6,252C526.6,252 531.6,252 536.6,252C541.6,252 546.6,252 551.6,252C556.7,252 561.7,252 566.7,252C571.7,252 576.7,217.9 581.7,217.9C586.7,217.9 591.7,252 596.7,252C601.7,252 606.7,247.5 611.7,244.7C616.7,241.9 621.7,240.8 626.7,235C631.8,229.1 636.8,147.4 641.8,147.4C646.8,147.4 651.8,164.8 656.8,174.1C661.8,183.4 666.8,191.2 671.8,203.3C676.8,215.5 681.8,252 686.8,252C691.8,252 696.8,252 701.8,252C706.8,252 711.9,252 716.9,252C721.9,252 726.9,252 731.9,252C736.9,252 741.9,252 746.9,252C751.9,252 756.9,252 761.9,252C766.9,252 771.9,252 776.9,252C781.9,252 787,127.9 792,127.9C797,127.9 802,171.1 807,183.9C812,196.7 817,203.3 822,213.1" pathLength="1" fill="none" stroke="url(#stroke)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="line"/>
+</g>
+<g class="fade" style="animation-delay:1.4s">
+  <circle cx="146.1" cy="98" r="4" fill="#0d1117" stroke="#bb9af7" stroke-width="2"/>
+  <text x="146.1" y="86" font-size="11" text-anchor="middle"><tspan class="muted">↑ fuori scala · off scale </tspan><tspan class="num" font-weight="600">308</tspan></text>
+</g>
+<circle cx="822" cy="213.1" r="4" fill="#bb9af7" class="pulse"/>
+<circle cx="822" cy="213.1" r="4" fill="#bb9af7"/>
+<text x="822" y="290" class="muted" font-size="10" text-anchor="end">aggiornato il 10 ott 2026 · updated daily</text>
+</svg>
