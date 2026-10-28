@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/header.svg" width="100%" alt="Ciao, sono Giovanni 👋 · Chef di professione, Dev per passione · Chef by trade, Dev by passion" />
+<img src="assets/header.svg" width="100%" alt="Hi, I'm Giovanni 👋 · Chef by trade, Dev by passion" />
 
 <br />
 
@@ -11,45 +11,41 @@
 <a href="https://giosci1994.github.io/linktome/"><img src="https://img.shields.io/badge/All%20my%20links-8250DF?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0ibTcuNzc1IDMuMjc1IDEuMjUtMS4yNWEzLjUgMy41IDAgMSAxIDQuOTUgNC45NWwtMi41IDIuNWEzLjUgMy41IDAgMCAxLTQuOTUgMCAuNzUxLjc1MSAwIDAgMSAuMDE4LTEuMDQyLjc1MS43NTEgMCAwIDEgMS4wNDItLjAxOCAxLjk5OCAxLjk5OCAwIDAgMCAyLjgzIDBsMi41LTIuNWEyLjAwMiAyLjAwMiAwIDAgMC0yLjgzLTIuODNsLTEuMjUgMS4yNWEuNzUxLjc1MSAwIDAgMS0xLjA0Mi0uMDE4Ljc1MS43NTEgMCAwIDEtLjAxOC0xLjA0MlptLTQuNjkgOS42NGExLjk5OCAxLjk5OCAwIDAgMCAyLjgzIDBsMS4yNS0xLjI1YS43NTEuNzUxIDAgMCAxIDEuMDQyLjAxOC43NTEuNzUxIDAgMCAxIC4wMTggMS4wNDJsLTEuMjUgMS4yNWEzLjUgMy41IDAgMSAxLTQuOTUtNC45NWwyLjUtMi41YTMuNSAzLjUgMCAwIDEgNC45NSAwIC43NTEuNzUxIDAgMCAxLS4wMTggMS4wNDIuNzUxLjc1MSAwIDAgMS0xLjA0Mi4wMTggMS45OTggMS45OTggMCAwIDAtMi44MyAwbC0yLjUgMi41YTEuOTk4IDEuOTk4IDAgMCAwIDAgMi44M1oiLz48L3N2Zz4%3D" alt="All my links" /></a>
 <a href="https://arborae.github.io"><img src="https://img.shields.io/badge/Arborae-2F855A?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTcuMjUgOGgxLjV2Ny4yNWEuNzUuNzUgMCAwIDEtMS41IDBaIi8%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTggOS41QzggNSAxMC41IDEuNSAxNSAxLjVjMCA0LjUtMi41IDgtNyA4WiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik04IDExLjVDOCA4IDYgNSAxIDVjMCA0IDIuNSA2LjUgNyA2LjVaIi8%2BPC9zdmc%2B" alt="Arborae" /></a>
 
-<a href="https://github.com/giosci1994?tab=followers"><img src="https://img.shields.io/github/followers/giosci1994?label=Follower&style=flat-square&logo=github&color=7aa2f7" alt="Follower" /></a>
-<img src="https://komarev.com/ghpvc/?username=giosci1994&label=Visite%20%C2%B7%20Views&color=bb9af7&style=flat-square" alt="Profile views" />
+<a href="https://github.com/giosci1994?tab=followers"><img src="https://img.shields.io/github/followers/giosci1994?label=Followers&style=flat-square&logo=github&color=7aa2f7" alt="Followers" /></a>
+<img src="https://komarev.com/ghpvc/?username=giosci1994&label=Profile%20views&color=bb9af7&style=flat-square" alt="Profile views" />
 
 </div>
 
-## 👋 Chi sono · About me
+## 👋 About me
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 👨‍🍳 Lo Chef · The Chef
+### 👨‍🍳 The Chef
 
-🇮🇹 Chef con laurea in **Arti Culinarie** (Accademia Italiana di Cucina, Firenze). Ho cucinato tra Roma, Firenze, la Sicilia, Birmingham, Londra, Riva del Garda e dintorni e il fine dining di Copenhagen.
+Chef with a degree in **Culinary Arts** (Italian Culinary Academy, Florence). I've cooked across Rome, Florence, Sicily, Birmingham, London, Riva del Garda and Copenhagen fine dining.
 
-🇬🇧 Chef with a degree in **Culinary Arts** (Italian Culinary Academy, Florence). I've cooked across Rome, Florence, Sicily, Birmingham, London, Riva del Garda and Copenhagen fine dining.
-
-- 🍝 Pasta fresca artigianale · *handmade fresh pasta*
-- 🔥 Griglia a carbone Josper · *Josper charcoal grill*
-- 🧪 Gastronomia molecolare · *molecular gastronomy*
+- 🍝 Handmade fresh pasta
+- 🔥 Josper charcoal grill
+- 🧪 Molecular gastronomy
 
 </td>
 <td width="50%" valign="top">
 
-### 💻 Il Dev · The Dev
+### 💻 The Dev
 
-🇮🇹 IT enthusiast · Homelab & Automation. Software open source nato da problemi veri di casa.
+IT enthusiast · Homelab & Automation. Open-source software born from real problems at home.
 
-🇬🇧 IT enthusiast · Homelab & Automation. Open-source software born from real problems at home.
-
-- 🏠 Homelab nato su un Raspberry Pi, oggi su un mini PC Intel N150 con Docker · *started on a Raspberry Pi, now self-hosted on an Intel N150 mini PC*
-- 🧩 Home Assistant · Traefik · Pi-hole · Nextcloud · WireGuard · tunnel Cloudflare
-- 🌱 Ho fondato con un amico [**Arborae**](https://arborae.github.io), organizzazione open source di software pulito, modulare e documentato · *co-founded with a friend: clean, modular, documented open-source software*
+- 🏠 Homelab that started on a Raspberry Pi and now runs on an Intel N150 mini PC with Docker
+- 🧩 Home Assistant · Traefik · Pi-hole · Nextcloud · WireGuard · Cloudflare Tunnel
+- 🌱 Co-founded [**Arborae**](https://arborae.github.io) with a friend: an open-source organization for clean, modular, well-documented software
 
 </td>
 </tr>
 </table>
 
-## ✨ Progetti in evidenza · Featured projects
+## ✨ Featured projects
 
 <table>
 <tr>
@@ -57,22 +53,20 @@
 
 #### 🏡 [floor3d-card mod](https://github.com/giosci1994/floor3d-card)
 
-Il digital twin 3D della casa in Home Assistant: fork di floor3d-card con librerie aggiornate, editor visuale, mappe dei sensori, allarmi, cielo e meteo, telecamere. Nella lista ufficiale di HACS.<br />
-<sub>*3D digital twin of your home for Home Assistant — a fork of floor3d-card with updated libraries and many new features, now in the HACS default store.*</sub>
+A 3D digital twin of your home for Home Assistant. A fork of floor3d-card with updated libraries, a visual editor, sensor maps, alarms, sky and weather, and cameras. Now in the HACS default store.
 
 <a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=giosci1994&repository=floor3d-card&category=plugin"><img src="https://img.shields.io/badge/HACS-Default-41BDF5?style=flat-square&logo=homeassistantcommunitystore&logoColor=white" alt="HACS Default" /></a>
 <a href="https://github.com/giosci1994/floor3d-card/releases/latest"><img src="https://img.shields.io/github/v/release/giosci1994/floor3d-card?style=flat-square&label=release&color=7aa2f7" alt="Release" /></a>
-[📖 Documentazione · Docs](https://giosci1994.github.io/floor3d-card/)
+[📖 Docs](https://giosci1994.github.io/floor3d-card/)
 
 </td>
 <td width="50%" valign="top">
 
 #### 🐳 [d2ha — Docker to Home Assistant](https://github.com/arborae/docker2homeassistant)
 
-Container Docker dentro Home Assistant, web UI moderna e autodiscovery MQTT.<br />
-<sub>*Docker containers inside Home Assistant, modern web UI & MQTT autodiscovery.*</sub>
+Docker containers inside Home Assistant, with a modern web UI and MQTT autodiscovery.
 
-🌱 Un progetto [Arborae](https://arborae.github.io) · [📖 Documentazione · Docs](https://arborae.github.io/docker2homeassistant/)
+🌱 An [Arborae](https://arborae.github.io) project · [📖 Docs](https://arborae.github.io/docker2homeassistant/)
 
 </td>
 </tr>
@@ -81,26 +75,24 @@ Container Docker dentro Home Assistant, web UI moderna e autodiscovery MQTT.<br 
 
 #### 🏋️ [WebApp Palestra](https://github.com/giosci1994/webapp-palestra)
 
-Piattaforma a microservizi per la gestione della palestra: dashboard web, bot Telegram e scraper automatico.<br />
-<sub>*Microservice platform for gym management: web dashboard, Telegram bot & automated scraper.*</sub>
+Microservice platform for gym management: web dashboard, Telegram bot and automated scraper.
 
-`JavaScript` `Telegram Bot` · [🌐 Sito · Site](https://giosci1994.github.io/webapp-palestra/)
+`JavaScript` `Telegram Bot` · [🌐 Website](https://giosci1994.github.io/webapp-palestra/)
 
 </td>
 <td width="50%" valign="top">
 
 #### 🍳 [WebApp Kitchen](https://github.com/giosci1994/kitchen-app)
 
-Gestione di cucina e ristorante: PWA con inventario, ricette e prep list, pronta per Docker.<br />
-<sub>*Kitchen & restaurant management PWA: inventory, recipes, prep lists, Docker ready.*</sub>
+Kitchen and restaurant management PWA: inventory, recipes and prep lists, Docker ready.
 
-`TypeScript` `PWA` `Docker` · [🌐 Sito · Site](https://giosci1994.github.io/kitchen-app/)
+`TypeScript` `PWA` `Docker` · [🌐 Website](https://giosci1994.github.io/kitchen-app/)
 
 </td>
 </tr>
 </table>
 
-## 🧩 Progetti standalone · Standalone projects
+## 🧩 Standalone projects
 
 <table>
 <tr>
@@ -108,28 +100,25 @@ Gestione di cucina e ristorante: PWA con inventario, ricette e prep list, pronta
 
 #### 🎵 [Widget Spotify](https://github.com/giosci1994/widget-spotify)
 
-Mini-telecomando Spotify nella system tray di Windows: brano in riproduzione, comandi e cambio dispositivo.<br />
-<sub>*Spotify remote in the Windows tray: now playing, controls & device switch.*</sub>
+A small Spotify remote in the Windows system tray: now playing, playback controls and device switching.
 
-`Electron` `Spotify Web API` · [🌐 Sito](https://giosci1994.github.io/widget-spotify/)
+`Electron` `Spotify Web API` · [🌐 Website](https://giosci1994.github.io/widget-spotify/)
 
 </td>
 <td width="33%" valign="top">
 
 #### 🔔 [PC-MQTT-Notifier](https://github.com/giosci1994/PC-MQTT-Notifier)
 
-Notifiche di MQTT e Home Assistant in sovrimpressione su Windows, leggere e personalizzabili.<br />
-<sub>*Lightweight Windows notification overlay for MQTT & Home Assistant.*</sub>
+A lightweight, customizable notification overlay on Windows for MQTT and Home Assistant.
 
-`Python` `MQTT` · [🌐 Sito](https://giosci1994.github.io/PC-MQTT-Notifier/)
+`Python` `MQTT` · [🌐 Website](https://giosci1994.github.io/PC-MQTT-Notifier/)
 
 </td>
 <td width="33%" valign="top">
 
 #### 🔧 [feature-overrides-registry](https://github.com/giosci1994/feature-overrides-registry)
 
-Sblocca il supporto NVMe nativo sperimentale su Windows.<br />
-<sub>*Unlocks experimental native NVMe support on Windows.*</sub>
+Unlocks experimental native NVMe support on Windows.
 
 `PowerShell` · [⬇️ Download](https://github.com/giosci1994/feature-overrides-registry/releases/latest)
 
@@ -137,24 +126,23 @@ Sblocca il supporto NVMe nativo sperimentale su Windows.<br />
 </tr>
 </table>
 
-## 🌍 Traduzioni · Translations
+## 🌍 Translations
 
 <table>
 <tr>
 <td valign="top">
 
-#### 🇮🇹 [Pokémon Rejuvenation — patch italiana](https://github.com/giosci1994/rejuvenation-ita-patch)
+#### 🇮🇹 [Pokémon Rejuvenation — Italian patch](https://github.com/giosci1994/rejuvenation-ita-patch)
 
-Traduzione italiana non ufficiale e completa di Pokémon Rejuvenation: il 99,9% dei testi del gioco.<br />
-<sub>*Complete unofficial Italian translation patch for Pokémon Rejuvenation — 99.9% of the game's text.*</sub>
+A complete, unofficial Italian translation of Pokémon Rejuvenation, covering 99.9% of the game's text.
 
-[🌐 Sito · Site](https://giosci1994.github.io/rejuvenation-ita-patch/)
+[🌐 Website](https://giosci1994.github.io/rejuvenation-ita-patch/)
 
 </td>
 </tr>
 </table>
 
-## 🧰 Il mio stack · My toolbox
+## 🧰 My toolbox
 
 **Homelab & Automation**
 
@@ -186,16 +174,16 @@ Traduzione italiana non ufficiale e completa di Pokémon Rejuvenation: il 99,9% 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/giosci1994/giosci1994/output/stats-dark.svg" />
-  <img src="https://raw.githubusercontent.com/giosci1994/giosci1994/output/stats-light.svg" width="49%" alt="Statistiche GitHub · GitHub stats" />
+  <img src="https://raw.githubusercontent.com/giosci1994/giosci1994/output/stats-light.svg" width="49%" alt="GitHub stats" />
 </picture>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/giosci1994/giosci1994/output/languages-dark.svg" />
-  <img src="https://raw.githubusercontent.com/giosci1994/giosci1994/output/languages-light.svg" width="49%" alt="Linguaggi più usati · Top languages" />
+  <img src="https://raw.githubusercontent.com/giosci1994/giosci1994/output/languages-light.svg" width="49%" alt="Top languages" />
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/giosci1994/giosci1994/output/activity-dark.svg" />
-  <img src="https://raw.githubusercontent.com/giosci1994/giosci1994/output/activity-light.svg" width="100%" alt="Attività su GitHub · Contribution activity" />
+  <img src="https://raw.githubusercontent.com/giosci1994/giosci1994/output/activity-light.svg" width="100%" alt="Contribution activity" />
 </picture>
 
 </div>
@@ -204,8 +192,8 @@ Traduzione italiana non ufficiale e completa di Pokémon Rejuvenation: il 99,9% 
 
 <div align="center">
 
-*fatto con ❤️ tra fornelli e container · made with ❤️ between stoves and containers*
+*Made with ❤️ between stoves and containers*
 
-☕ Se un mio progetto ti è utile, puoi [offrirmi un caffè](https://buymeacoffee.com/giosci1994u) · *if one of my projects helps you, you can [buy me a coffee](https://buymeacoffee.com/giosci1994u)*
+☕ If one of my projects helps you, you can [buy me a coffee](https://buymeacoffee.com/giosci1994u)
 
 </div>

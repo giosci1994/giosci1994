@@ -29,7 +29,7 @@ const THEMES = {
 };
 
 const FONT = `-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif`;
-const MONTHS = ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic'];
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 // Octicons (MIT) — https://primer.style/octicons
 const ICONS = {
@@ -163,7 +163,7 @@ function computeLanguages(repos) {
   if (!total) return [];
   const top = sorted.length > TOP_LANGUAGES ? sorted.slice(0, TOP_LANGUAGES - 1) : sorted;
   const rest = sorted.slice(top.length).reduce((sum, l) => sum + l.size, 0);
-  if (rest) top.push({ name: 'Altro · Other', color: null, size: rest });
+  if (rest) top.push({ name: 'Other', color: null, size: rest });
   return top.map((l) => ({ ...l, share: l.size / total }));
 }
 
@@ -181,7 +181,7 @@ function weeklyActivity(days, weeks) {
 // ------------------------------------------------------------ formattazione
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
-const num = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '\u2009');
+const num = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 const round = (n) => Math.round(n * 10) / 10;
 
 function fmtDate(iso, withYear = false) {
@@ -231,23 +231,23 @@ ${body}
 
 function statsCard(s, t) {
   const hero = [
-    { x: 22, icon: 'commit', color: t.accent[0], label: 'Contributi', value: s.total, sub: `totali dal ${s.since}` },
-    { x: 150, icon: 'flame', color: t.fire, label: 'Streak attuale', value: s.current.length, unit: true, sub: fmtRange(s.current, 'nessuna in corso') },
-    { x: 280, icon: 'trophy', color: t.accent[1], label: 'Streak record', value: s.longest.length, unit: true, sub: fmtRange(s.longest, '—') },
+    { x: 22, icon: 'commit', color: t.accent[0], label: 'Contributions', value: s.total, sub: `total since ${s.since}` },
+    { x: 150, icon: 'flame', color: t.fire, label: 'Current streak', value: s.current.length, unit: true, sub: fmtRange(s.current, 'none right now') },
+    { x: 280, icon: 'trophy', color: t.accent[1], label: 'Longest streak', value: s.longest.length, unit: true, sub: fmtRange(s.longest, '—') },
   ];
   const colWidth = (i) => (hero[i + 1]?.x ?? 404) - hero[i].x - 8;
   const mini = [
-    { x: 22, icon: 'repo', value: s.repos, label: 'repo' },
-    { x: 112, icon: 'star', value: s.stars, label: s.stars === 1 ? 'stella' : 'stelle' },
-    { x: 202, icon: 'people', value: s.followers, label: 'follower' },
-    { x: 296, icon: 'calendar', value: s.thisYear, label: `nel ${s.year}` },
+    { x: 22, icon: 'repo', value: s.repos, label: s.repos === 1 ? 'repo' : 'repos' },
+    { x: 112, icon: 'star', value: s.stars, label: s.stars === 1 ? 'star' : 'stars' },
+    { x: 202, icon: 'people', value: s.followers, label: s.followers === 1 ? 'follower' : 'followers' },
+    { x: 296, icon: 'calendar', value: s.thisYear, label: `in ${s.year}` },
   ];
   const body = `
-<text x="22" y="32" class="title">STATISTICHE · GITHUB STATS</text>
+<text x="22" y="32" class="title">GITHUB STATS</text>
 ${hero.map((h, i) => `<g class="fade" style="animation-delay:${i * 120}ms">
   ${icon(h.icon, h.x, 51, h.color)}
   <text x="${h.x + 20}" y="62" class="muted" font-size="12.5">${h.label}</text>
-  <text x="${h.x}" y="100" class="num accent" font-size="30" font-weight="700">${num(h.value)}${h.unit ? `<tspan class="muted" font-size="12" font-weight="400" dx="5">${h.value === 1 ? 'giorno' : 'giorni'}</tspan>` : ''}</text>
+  <text x="${h.x}" y="100" class="num accent" font-size="30" font-weight="700">${num(h.value)}${h.unit ? `<tspan class="muted" font-size="12" font-weight="400" dx="5">${h.value === 1 ? 'day' : 'days'}</tspan>` : ''}</text>
   <text x="${h.x}" y="121" class="muted" font-size="11"${fit(h.sub, 11, colWidth(i))}>${esc(h.sub)}</text>
 </g>`).join('\n')}
 <line x1="22" y1="143" x2="398" y2="143" stroke="${t.grid}" stroke-width="1"/>
@@ -255,7 +255,7 @@ ${mini.map((m, i) => `<g class="fade" style="animation-delay:${360 + i * 80}ms">
   ${icon(m.icon, m.x, 162, t.muted)}
   <text x="${m.x + 20}" y="174" font-size="12.5"${fit(`${num(m.value)} ${m.label}`, 12.5, (mini[i + 1]?.x ?? 404) - m.x - 26)}><tspan class="num" font-weight="600">${num(m.value)}</tspan><tspan class="muted"> ${esc(m.label)}</tspan></text>
 </g>`).join('\n')}`;
-  return svg({ width: 420, height: 195, title: 'Statistiche GitHub · GitHub stats', theme: t, body });
+  return svg({ width: 420, height: 195, title: 'GitHub stats', theme: t, body });
 }
 
 function languagesCard(langs, t) {
@@ -272,7 +272,7 @@ function languagesCard(langs, t) {
     const colX = i % 2 ? 216 : 22;
     const colEnd = i % 2 ? 398 : 194;
     const y = 92 + Math.floor(i / 2) * 32;
-    const pct = `${(l.share * 100).toFixed(1).replace('.', ',')}%`;
+    const pct = `${(l.share * 100).toFixed(1)}%`;
     return `<g class="fade" style="animation-delay:${i * 80}ms">
   <circle cx="${colX + 5}" cy="${y - 4}" r="5" fill="${l.color ?? t.other}"/>
   <text x="${colX + 18}" y="${y}" font-size="13">${esc(l.name)}</text>
@@ -280,10 +280,10 @@ function languagesCard(langs, t) {
 </g>`;
   });
   const body = `
-<text x="22" y="32" class="title">LINGUAGGI · TOP LANGUAGES</text>
-${langs.length ? `<g clip-path="url(#bar)">${segments.join('')}</g>\n${legend.join('\n')}` : `<text x="22" y="100" class="muted" font-size="13">Nessun dato · No data yet</text>`}`;
+<text x="22" y="32" class="title">TOP LANGUAGES</text>
+${langs.length ? `<g clip-path="url(#bar)">${segments.join('')}</g>\n${legend.join('\n')}` : `<text x="22" y="100" class="muted" font-size="13">No data yet</text>`}`;
   const defs = `\n  <clipPath id="bar"><rect x="${barX}" y="48" width="${barW}" height="10" rx="5"/></clipPath>`;
-  return svg({ width: 420, height: 195, title: 'Linguaggi più usati · Top languages', theme: t, defs, body });
+  return svg({ width: 420, height: 195, title: 'Top languages', theme: t, defs, body });
 }
 
 // Curva monotona (niente oscillazioni sotto lo zero) come cubiche di Bézier.
@@ -363,7 +363,7 @@ function activityCard(buckets, t, updated) {
     const anchor = x > x1 - 60 ? 'end' : x < x0 + 60 ? 'start' : 'middle';
     peak = `<g class="fade" style="animation-delay:1.4s">
   <circle cx="${round(x)}" cy="${round(y)}" r="4" fill="${t.bg}" stroke="${t.accent[1]}" stroke-width="2"/>
-  <text x="${round(x)}" y="${round(y) - 12}" font-size="11" text-anchor="${anchor}"><tspan class="muted">${clipped ? '↑ fuori scala · off scale ' : 'picco · peak '}</tspan><tspan class="num" font-weight="600">${num(max)}</tspan></text>
+  <text x="${round(x)}" y="${round(y) - 12}" font-size="11" text-anchor="${anchor}"><tspan class="muted">${clipped ? '↑ off scale ' : 'peak '}</tspan><tspan class="num" font-weight="600">${num(max)}</tspan></text>
 </g>`;
   }
   const last = pts.at(-1);
@@ -382,10 +382,10 @@ function activityCard(buckets, t, updated) {
   .pulse { transform-origin: ${round(last.x)}px ${round(last.y)}px; animation: pulse 2s ease-out 1.6s infinite; opacity: 0; }
   @keyframes pulse { from { transform: scale(1); opacity: .6; } to { transform: scale(3.2); opacity: 0; } }`;
   const body = `
-<text x="24" y="38" font-size="17" font-weight="600">Attività su GitHub · Contribution activity</text>
-<text x="24" y="60" class="muted" font-size="12">Contributi a settimana, ultimi 12 mesi · weekly, last 12 months</text>
+<text x="24" y="38" font-size="17" font-weight="600">Contribution activity</text>
+<text x="24" y="60" class="muted" font-size="12">Weekly contributions over the last 12 months</text>
 <text x="${W - 28}" y="40" class="num accent" font-size="24" font-weight="700" text-anchor="end">${num(total)}</text>
-<text x="${W - 28}" y="60" class="muted" font-size="12" text-anchor="end">contributi · contributions</text>
+<text x="${W - 28}" y="60" class="muted" font-size="12" text-anchor="end">contributions</text>
 ${grid.join('\n')}
 ${months.join('\n')}
 <g clip-path="url(#plot)">
@@ -395,8 +395,8 @@ ${months.join('\n')}
 ${peak}
 <circle cx="${round(last.x)}" cy="${round(last.y)}" r="4" fill="${t.accent[1]}" class="pulse"/>
 <circle cx="${round(last.x)}" cy="${round(last.y)}" r="4" fill="${t.accent[1]}"/>
-<text x="${W - 28}" y="${H - 10}" class="muted" font-size="10" text-anchor="end">aggiornato il ${fmtDate(updated, true)} · updated daily</text>`;
-  return svg({ width: W, height: H, title: 'Attività su GitHub · Contribution activity', theme: t, defs, css, body });
+<text x="${W - 28}" y="${H - 10}" class="muted" font-size="10" text-anchor="end">updated ${fmtDate(updated, true)} · refreshed daily</text>`;
+  return svg({ width: W, height: H, title: 'Contribution activity', theme: t, defs, css, body });
 }
 
 // ------------------------------------------------------------------- main
