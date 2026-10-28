@@ -39,7 +39,7 @@
 
 🇬🇧 IT enthusiast · Homelab & Automation. Open-source software born from real problems at home.
 
-- 🏠 Homelab su Raspberry Pi con Docker · *self-hosted on a Raspberry Pi*
+- 🏠 Homelab nato su un Raspberry Pi, oggi su un mini PC Intel N150 con Docker · *started on a Raspberry Pi, now self-hosted on an Intel N150 mini PC*
 - 🧩 Home Assistant · Traefik · Pi-hole · Nextcloud · WireGuard · tunnel Cloudflare
 - 🌱 Co-fondatore di [**Arborae**](https://arborae.github.io) · *co-founder of Arborae*
 
@@ -103,8 +103,8 @@ Sblocca il supporto NVMe nativo sperimentale su Windows.<br />
 
 #### 🏠 Homelab
 
-Raspberry Pi con Docker: Home Assistant, Traefik, Pi-hole, Nextcloud, WireGuard, tunnel Cloudflare.<br />
-<sub>*Self-hosted on a Raspberry Pi.*</sub>
+Nato su un Raspberry Pi, oggi gira su un mini PC Intel N150 con Docker: Home Assistant, Traefik, Pi-hole, Nextcloud, WireGuard, tunnel Cloudflare.<br />
+<sub>*Started on a Raspberry Pi, now self-hosted on an Intel N150 mini PC.*</sub>
 
 </td>
 </tr>
@@ -136,6 +136,7 @@ Raspberry Pi con Docker: Home Assistant, Traefik, Pi-hole, Nextcloud, WireGuard,
 ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-18BCF2?style=flat-square&logo=homeassistant&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=flat-square&logo=raspberrypi&logoColor=white)
+![Intel N150](https://img.shields.io/badge/Intel%20N150-0071C5?style=flat-square&logo=intel&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![MQTT](https://img.shields.io/badge/MQTT-660066?style=flat-square&logo=mqtt&logoColor=white)
 ![Traefik](https://img.shields.io/badge/Traefik-24A1C1?style=flat-square&logo=traefikproxy&logoColor=white)
