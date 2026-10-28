@@ -1,5 +1,4 @@
-// Genera le card SVG del profilo (statistiche, linguaggi, attività) e aggiorna
-// la lista dei repository pubblici nel README.
+// Genera le card SVG del profilo (statistiche, linguaggi, attività).
 // Gira ogni giorno nella GitHub Action .github/workflows/profile.yml:
 // nessun servizio esterno da cui dipendere, nessuna dipendenza npm (Node >= 20).
 //
@@ -7,20 +6,16 @@
 //   GITHUB_TOKEN  token per l'API GraphQL di GitHub (in Actions: secrets.GITHUB_TOKEN)
 //   GH_LOGIN      utente GitHub (default: proprietario del repository)
 //   OUT_DIR       cartella in cui scrivere gli SVG (default: dist)
-//   README_PATH   README da aggiornare (default: README.md)
 
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const LOGIN = process.env.GH_LOGIN || process.env.GITHUB_REPOSITORY_OWNER;
 const TOKEN = process.env.GITHUB_TOKEN;
 const OUT_DIR = process.env.OUT_DIR || 'dist';
-const README_PATH = process.env.README_PATH || 'README.md';
 
 const ACTIVITY_WEEKS = 52; // finestra del grafico attività
 const TOP_LANGUAGES = 6;
-const REPOS_START = '<!-- REPOS:START -->';
-const REPOS_END = '<!-- REPOS:END -->';
 
 const THEMES = {
   dark: {
@@ -54,18 +49,11 @@ query ($login: String!, $after: String) {
   user(login: $login) {
     createdAt
     followers { totalCount }
-    repositories(first: 100, after: $after, ownerAffiliations: OWNER, privacy: PUBLIC,
-                 isFork: false, orderBy: { field: PUSHED_AT, direction: DESC }) {
+    repositories(first: 100, after: $after, ownerAffiliations: OWNER, privacy: PUBLIC, isFork: false) {
       pageInfo { hasNextPage endCursor }
       nodes {
         name
-        url
-        description
-        homepageUrl
         stargazerCount
-        isArchived
-        pushedAt
-        primaryLanguage { name }
         languages(first: 20, orderBy: { field: SIZE, direction: DESC }) {
           edges { size node { name color } }
         }
@@ -112,7 +100,7 @@ async function fetchProfile() {
     const { hasNextPage, endCursor } = user.repositories.pageInfo;
     after = hasNextPage ? endCursor : null;
   } while (after);
-  // Fuori dalla lista il repository del profilo (questo) e quello di servizio .github.
+  // Fuori dai conteggi il repository del profilo (questo) e quello di servizio .github.
   const hidden = new Set([LOGIN.toLowerCase(), '.github']);
   return { user, repos: repos.filter((r) => !hidden.has(r.name.toLowerCase())) };
 }
@@ -411,53 +399,6 @@ ${peak}
   return svg({ width: W, height: H, title: 'Attività su GitHub · Contribution activity', theme: t, defs, css, body });
 }
 
-// ---------------------------------------------------------- README: repo
-
-const mdText = (s) => s.replace(/\s+/g, ' ').trim().replace(/[\\|]/g, '\\$&').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-// Taglia a fine parola, senza spezzare emoji o caratteri composti.
-function truncate(s, max) {
-  const chars = Array.from(s);
-  if (chars.length <= max) return s;
-  const cut = chars.slice(0, max).join('');
-  const space = cut.lastIndexOf(' ');
-  return `${(space > max * 0.6 ? cut.slice(0, space) : cut).replace(/[\s.,;:·—–-]+$/, '')}…`;
-}
-
-function reposMarkdown(repos) {
-  if (!repos.length) return '_Ancora nessun repository pubblico · No public repositories yet._';
-  const sorted = [...repos].sort((a, b) => a.isArchived - b.isArchived || (b.pushedAt ?? '').localeCompare(a.pushedAt ?? ''));
-  const rows = sorted.map((r) => {
-    let name = `[**${r.name}**](${r.url})`;
-    if (r.homepageUrl) name += ` [🔗](<${/^https?:\/\//.test(r.homepageUrl) ? r.homepageUrl : `https://${r.homepageUrl}`}>)`;
-    if (r.stargazerCount) name += ` <sub>⭐ ${r.stargazerCount}</sub>`;
-    if (r.isArchived) name += ' <sub>archiviato · archived</sub>';
-    const description = r.description ? mdText(truncate(r.description, 130)) : '—';
-    const language = r.primaryLanguage ? mdText(r.primaryLanguage.name) : '—';
-    const pushed = r.pushedAt ? `${MONTHS[Number(r.pushedAt.slice(5, 7)) - 1]} ${r.pushedAt.slice(0, 4)}` : '—';
-    return `| ${name} | ${description} | ${language} | ${pushed} |`;
-  });
-  return [
-    '| Repository | Descrizione · Description | Linguaggio · Language | Ultimo push · Last push |',
-    '| :-- | :-- | :-- | :-- |',
-    ...rows,
-  ].join('\n');
-}
-
-async function updateReadme(repos) {
-  const readme = await readFile(README_PATH, 'utf8');
-  const start = readme.indexOf(REPOS_START);
-  const end = readme.indexOf(REPOS_END);
-  if (start < 0 || end < start) {
-    console.warn(`Marcatori ${REPOS_START} / ${REPOS_END} non trovati: README non aggiornato.`);
-    return false;
-  }
-  const updated = `${readme.slice(0, start + REPOS_START.length)}\n\n${reposMarkdown(repos)}\n\n${readme.slice(end)}`;
-  if (updated === readme) return false;
-  await writeFile(README_PATH, updated);
-  return true;
-}
-
 // ------------------------------------------------------------------- main
 
 if (!LOGIN) throw new Error('Imposta GH_LOGIN (o GITHUB_REPOSITORY_OWNER).');
@@ -486,11 +427,10 @@ for (const [name, theme] of Object.entries(THEMES)) {
   await writeFile(join(OUT_DIR, `languages-${name}.svg`), languagesCard(languages, theme));
   await writeFile(join(OUT_DIR, `activity-${name}.svg`), activityCard(activity, theme, today));
 }
-const readmeChanged = await updateReadme(repos);
 
 console.log(`Utente: ${LOGIN}`);
 console.log(`Contributi: ${stats.total} totali, ${stats.thisYear} nel ${year}`);
 console.log(`Streak: attuale ${stats.current.length}, record ${stats.longest.length}`);
 console.log(`Repository pubblici: ${repos.length} · stelle: ${stats.stars} · follower: ${stats.followers}`);
 console.log(`Linguaggi: ${languages.map((l) => `${l.name} ${(l.share * 100).toFixed(1)}%`).join(', ') || '—'}`);
-console.log(`SVG scritti in ${OUT_DIR}/ · README ${readmeChanged ? 'aggiornato' : 'invariato'}`);
+console.log(`SVG scritti in ${OUT_DIR}/`);
