@@ -9,6 +9,7 @@
 <a href="https://www.instagram.com/giovannilacascia/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
 <a href="https://buymeacoffee.com/giosci1994u"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee" /></a>
 <a href="https://giosci1994.github.io/linktome/"><img src="https://img.shields.io/badge/All%20my%20links-8250DF?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0ibTcuNzc1IDMuMjc1IDEuMjUtMS4yNWEzLjUgMy41IDAgMSAxIDQuOTUgNC45NWwtMi41IDIuNWEzLjUgMy41IDAgMCAxLTQuOTUgMCAuNzUxLjc1MSAwIDAgMSAuMDE4LTEuMDQyLjc1MS43NTEgMCAwIDEgMS4wNDItLjAxOCAxLjk5OCAxLjk5OCAwIDAgMCAyLjgzIDBsMi41LTIuNWEyLjAwMiAyLjAwMiAwIDAgMC0yLjgzLTIuODNsLTEuMjUgMS4yNWEuNzUxLjc1MSAwIDAgMS0xLjA0Mi0uMDE4Ljc1MS43NTEgMCAwIDEtLjAxOC0xLjA0MlptLTQuNjkgOS42NGExLjk5OCAxLjk5OCAwIDAgMCAyLjgzIDBsMS4yNS0xLjI1YS43NTEuNzUxIDAgMCAxIDEuMDQyLjAxOC43NTEuNzUxIDAgMCAxIC4wMTggMS4wNDJsLTEuMjUgMS4yNWEzLjUgMy41IDAgMSAxLTQuOTUtNC45NWwyLjUtMi41YTMuNSAzLjUgMCAwIDEgNC45NSAwIC43NTEuNzUxIDAgMCAxLS4wMTggMS4wNDIuNzUxLjc1MSAwIDAgMS0xLjA0Mi4wMTggMS45OTggMS45OTggMCAwIDAtMi44MyAwbC0yLjUgMi41YTEuOTk4IDEuOTk4IDAgMCAwIDAgMi44M1oiLz48L3N2Zz4%3D" alt="All my links" /></a>
+<a href="https://arborae.github.io"><img src="https://img.shields.io/badge/Arborae-2F855A?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTcuMjUgOGgxLjV2Ny4yNWEuNzUuNzUgMCAwIDEtMS41IDBaIi8%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTggOS41QzggNSAxMC41IDEuNSAxNSAxLjVjMCA0LjUtMi41IDgtNyA4WiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik04IDExLjVDOCA4IDYgNSAxIDVjMCA0IDIuNSA2LjUgNyA2LjVaIi8%2BPC9zdmc%2B" alt="Arborae" /></a>
 
 <a href="https://github.com/giosci1994?tab=followers"><img src="https://img.shields.io/github/followers/giosci1994?label=Follower&style=flat-square&logo=github&color=7aa2f7" alt="Follower" /></a>
 <img src="https://komarev.com/ghpvc/?username=giosci1994&label=Visite%20%C2%B7%20Views&color=bb9af7&style=flat-square" alt="Profile views" />
@@ -42,7 +43,7 @@
 
 - 🏠 Homelab nato su un Raspberry Pi, oggi su un mini PC Intel N150 con Docker · *started on a Raspberry Pi, now self-hosted on an Intel N150 mini PC*
 - 🧩 Home Assistant · Traefik · Pi-hole · Nextcloud · WireGuard · tunnel Cloudflare
-- 🌱 Co-fondatore di [**Arborae**](https://arborae.github.io) · *co-founder of Arborae*
+- 🌱 Ho fondato con un amico [**Arborae**](https://arborae.github.io), organizzazione open source di software pulito, modulare e documentato · *co-founded with a friend: clean, modular, documented open-source software*
 
 </td>
 </tr>
@@ -71,7 +72,7 @@ Il digital twin 3D della casa in Home Assistant: fork di floor3d-card con librer
 Container Docker dentro Home Assistant, web UI moderna e autodiscovery MQTT.<br />
 <sub>*Docker containers inside Home Assistant, modern web UI & MQTT autodiscovery.*</sub>
 
-[📖 Documentazione · Docs](https://arborae.github.io/docker2homeassistant/)
+🌱 Un progetto [Arborae](https://arborae.github.io) · [📖 Documentazione · Docs](https://arborae.github.io/docker2homeassistant/)
 
 </td>
 </tr>
@@ -152,25 +153,6 @@ Traduzione italiana non ufficiale e completa di Pokémon Rejuvenation: il 99,9% 
 </td>
 </tr>
 </table>
-
-## 📦 Repository pubblici · Public repositories
-
-<sub>Aggiornati automaticamente ogni giorno · updated automatically every day</sub>
-
-<!-- REPOS:START -->
-
-| Repository | Descrizione · Description | Linguaggio · Language | Ultimo push · Last push |
-| :-- | :-- | :-- | :-- |
-| [**webapp-palestra**](https://github.com/giosci1994/webapp-palestra) [🔗](<https://giosci1994.github.io/webapp-palestra/>) | 🏋️‍♂️ Complete microservice architecture platform for gym management with Web Dashboard, Telegram Bot & Automated Scraper. | JavaScript | ott 2026 |
-| [**widget-spotify**](https://github.com/giosci1994/widget-spotify) [🔗](<https://giosci1994.github.io/widget-spotify/>) | 🎵 Spotify remote in the Windows system tray — now playing, controls & device switch (Echo/PC/phone). Electron + Spotify Web API… | JavaScript | ott 2026 |
-| [**linktome**](https://github.com/giosci1994/linktome) [🔗](<https://giosci1994.github.io/linktome/>) | 🔗 All my links in one place: socials, projects & support. Day = Chef, night = Dev. Bilingual IT/EN, vanilla HTML/CSS/JS on GitHub… | HTML | ott 2026 |
-| [**giosci1994.github.io**](https://github.com/giosci1994/giosci1994.github.io) [🔗](<https://giosci1994.github.io>) | 👨‍🍳💻 Personal site of Giovanni La Cascia — Chef by day, Dev by night. Split-screen, dual-theme, bilingual IT/EN. Vanilla… | HTML | ott 2026 |
-| [**feature-overrides-registry**](https://github.com/giosci1994/feature-overrides-registry) [🔗](<https://github.com/giosci1994/feature-overrides-registry/releases/latest>) <sub>⭐ 1</sub> | Enable/Disable hidden Windows Feature Management overrides to unlock experimental Native NVMe support. Includes scripts, .exe… | PowerShell | ott 2026 |
-| [**kitchen-app**](https://github.com/giosci1994/kitchen-app) [🔗](<https://giosci1994.github.io/kitchen-app/>) | Modern Kitchen & Restaurant Management Platform (PWA, Inventory, Recipes, Prep-Lists & Docker ready) | TypeScript | ott 2026 |
-| [**PC-MQTT-Notifier**](https://github.com/giosci1994/PC-MQTT-Notifier) [🔗](<https://giosci1994.github.io/PC-MQTT-Notifier/>) | 🔔 Lightweight Windows notification overlay for MQTT & Home Assistant — customizable scale, transparency, fluid background, tray… | Python | ott 2026 |
-| [**rejuvenation-ita-patch**](https://github.com/giosci1994/rejuvenation-ita-patch) [🔗](<https://giosci1994.github.io/rejuvenation-ita-patch/>) | 🇮🇹 Complete unofficial Italian translation patch for Pokémon Rejuvenation — 99.9% of the game's text | Python | set 2026 |
-
-<!-- REPOS:END -->
 
 ## 🧰 Il mio stack · My toolbox
 
