@@ -1,7 +1,8 @@
 name: Profilo · grafici
 
-# Rigenera ogni giorno le card SVG (statistiche, linguaggi, attività) del README.
-# Gli SVG finiscono sul branch `output` (un solo commit, sovrascritto a ogni run)
+# Rigenera ogni giorno le card SVG (statistiche, linguaggi, attività) del README
+# e stats.json, gli stessi numeri come dati per il sito personale.
+# I file finiscono sul branch `output` (un solo commit, sovrascritto a ogni run)
 # così la history di main resta pulita.
 
 on:
@@ -45,7 +46,7 @@ jobs:
           mv dist "$RUNNER_TEMP/dist"
           git checkout -q --orphan output
           git rm -rfq .
-          cp "$RUNNER_TEMP"/dist/*.svg .
+          cp "$RUNNER_TEMP"/dist/*.svg "$RUNNER_TEMP"/dist/stats.json .
           git add -A
           git commit -q -m "Aggiorna i grafici del profilo"
           for attempt in 1 2 3; do
