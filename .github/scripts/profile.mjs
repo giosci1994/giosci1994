@@ -1,11 +1,12 @@
-// Genera le card SVG del profilo (statistiche, linguaggi, attività).
+// Genera le card SVG del profilo (statistiche, linguaggi, attività) e stats.json,
+// gli stessi numeri in forma di dati per chi li vuole disegnare da sé (il sito personale).
 // Gira ogni giorno nella GitHub Action .github/workflows/profile.yml:
 // nessun servizio esterno da cui dipendere, nessuna dipendenza npm (Node >= 20).
 //
 // Variabili d'ambiente:
 //   GITHUB_TOKEN  token per l'API GraphQL di GitHub (in Actions: secrets.GITHUB_TOKEN)
 //   GH_LOGIN      utente GitHub (default: proprietario del repository)
-//   OUT_DIR       cartella in cui scrivere gli SVG (default: dist)
+//   OUT_DIR       cartella in cui scrivere SVG e stats.json (default: dist)
 
 import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -428,9 +429,25 @@ for (const [name, theme] of Object.entries(THEMES)) {
   await writeFile(join(OUT_DIR, `activity-${name}.svg`), activityCard(activity, theme, today));
 }
 
+// Gli stessi numeri come dati: la pagina Dev di giosci1994.github.io li legge da
+// raw.githubusercontent.com (branch output) e li disegna nel proprio stile, in IT/EN.
+const span = ({ length, start, end }) => (length ? { length, start, end } : { length: 0 });
+const data = {
+  updated: today,
+  login: LOGIN,
+  contributions: { total: stats.total, since: stats.since, year, thisYear: stats.thisYear },
+  streak: { current: span(stats.current), longest: span(stats.longest) },
+  repos: stats.repos,
+  stars: stats.stars,
+  followers: stats.followers,
+  languages: languages.map((l) => ({ name: l.name, color: l.color, share: Math.round(l.share * 10000) / 10000 })),
+  weekly: activity.map(({ start, end, count }) => ({ start, end, count })),
+};
+await writeFile(join(OUT_DIR, 'stats.json'), JSON.stringify(data, null, 2) + '\n');
+
 console.log(`Utente: ${LOGIN}`);
 console.log(`Contributi: ${stats.total} totali, ${stats.thisYear} nel ${year}`);
 console.log(`Streak: attuale ${stats.current.length}, record ${stats.longest.length}`);
 console.log(`Repository pubblici: ${repos.length} · stelle: ${stats.stars} · follower: ${stats.followers}`);
 console.log(`Linguaggi: ${languages.map((l) => `${l.name} ${(l.share * 100).toFixed(1)}%`).join(', ') || '—'}`);
-console.log(`SVG scritti in ${OUT_DIR}/`);
+console.log(`SVG e stats.json scritti in ${OUT_DIR}/`);
