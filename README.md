@@ -134,6 +134,15 @@ A simple cleaning and optimization tool for Windows 11, with Base and Expert mod
 `C#` `.NET` `WPF` · [🌐 Website](https://giosci1994.github.io/W11-cleaner-tool/)
 
 </td>
+<td width="33%" valign="top">
+
+#### 🏎️ [Ingegnere F1](https://github.com/giosci1994/ingegnere-f1)
+
+A home-made race engineer for EA SPORTS F1 25: reads the UDP telemetry and talks to you in Italian, team-radio style, on your phone.
+
+`Python` `Docker` `Piper TTS` · [🌐 Website](https://giosci1994.github.io/ingegnere-f1/)
+
+</td>
 </tr>
 </table>
 
