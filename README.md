@@ -124,6 +124,17 @@ Unlocks experimental native NVMe support on Windows.
 
 </td>
 </tr>
+<tr>
+<td width="33%" valign="top">
+
+#### 🧹 [W11-cleaner-tool](https://github.com/giosci1994/W11-cleaner-tool)
+
+A simple cleaning and optimization tool for Windows 11, with Base and Expert mode: portable exe for x64 and ARM64.
+
+`C#` `.NET` `WPF` · [🌐 Website](https://giosci1994.github.io/W11-cleaner-tool/)
+
+</td>
+</tr>
 </table>
 
 ## 🌍 Translations
